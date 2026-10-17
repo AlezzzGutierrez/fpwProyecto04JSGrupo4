@@ -11,6 +11,17 @@ function App() {
     setDado(resultado);
   }
 
+  // Devuelve el mensaje según el valor actual del dado
+  function obtenerMensaje() {
+    if (dado === 1) {
+      return "Mala suerte, sacaste 1";
+    } else if (dado === 6) {
+      return "¡FELICIDADES! ¡Sacaste el mayor!";
+    } else {
+      return "Buen tiro!";
+    }
+  }
+
   return (
     <div>
       <h1>Simulador de Dado</h1>
@@ -20,6 +31,8 @@ function App() {
       <button onClick={lanzarDado}>
         Lanzar Dado
       </button>
+
+      <p>{obtenerMensaje()}</p>
     </div>
   );
 }
