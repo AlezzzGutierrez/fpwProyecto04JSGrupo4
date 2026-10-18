@@ -1,5 +1,5 @@
-
 import { useState } from "react";
+import "./css"; // 1. Importamos el archivo CSS
 
 function App() {
   const [dado, setDado] = useState(1);
@@ -18,21 +18,42 @@ function App() {
     } else if (dado === 6) {
       return "¡FELICIDADES! ¡Sacaste el mayor!";
     } else {
-      return "Buen tiro!";
+      return `¡Buen tiro, sacaste ${dado}!`;
     }
   }
 
   return (
-    <div>
-      <h1>Simulador de Dado</h1>
+    <div className="main-card">
+      {/* Título estilizado */}
+      <h1 className="titulo">Simulador de Dado</h1>
 
-      <div>{carasDado[dado - 1]}</div>
+      {/* Contenedor principal de 3 columnas */}
+      <div className="grid-container">
+        {/* Columna 1: Botones a la izquierda */}
+        <div className="columna-botones">
+          <button className="btn-dado" onClick={lanzarDado}>
+            Lanzar Dado 1
+          </button>
+          <button className="btn-dado" onClick={lanzarDado}>
+            Lanzar Dado 2
+          </button>
+        </div>
 
-      <button onClick={lanzarDado}>
-        Lanzar Dado
-      </button>
+        {/* Columna 2: Número en el medio */}
+        <div className="box-centro">
+          <span className="numero-resultado">{dado}</span>
+        </div>
 
-      <p>{obtenerMensaje()}</p>
+        {/* Columna 3: Icono/Caras del dado a la derecha */}
+        <div className="box-dado">
+          <span className="icono-dado">{carasDado[dado - 1]}</span>
+        </div>
+      </div>
+
+      {/* Banner de resultado inferior */}
+      <div className={`banner-resultado ${dado === 1 ? 'mala-suerte' : ''}`}>
+        {obtenerMensaje()}
+      </div>
     </div>
   );
 }
