@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./css"; // 1. Importamos el archivo CSS
+import "./css/style.css";
 
 function App() {
   const [dado, setDado] = useState(1);
