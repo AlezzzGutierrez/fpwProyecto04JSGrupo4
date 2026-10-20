@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { validatePlayerForm } from "../js/validation.js";
+import "../css/player-form.css";
 
 function PlayerForm({ onSavePlayer }) {
   const [firstName, setFirstName] = useState("");

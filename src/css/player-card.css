@@ -1,0 +1,37 @@
+/* Tarjeta con los datos del jugador */
+.player-card {
+    background-color: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(28, 59, 34, 0.3);
+    border-radius: 16px;
+    padding: 25px;
+    box-sizing: border-box;
+    width: 100%;
+    color: #1c3b22;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de la tarjeta */
+.player-card h3 {
+    font-family: 'Pacifico', cursive;
+    color: #1c3b22;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Datos del jugador */
+.player-card p {
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 12px;
+    border-radius: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+/* Nombre de cada dato */
+.player-card strong {
+    color: #1e4570;
+    margin-right: 5px;
+}
