@@ -1,3 +1,5 @@
+import "../css/game-results.css";
+
 function GameResults({ rolls = [], totalScore = 0 }) {
 
   return (

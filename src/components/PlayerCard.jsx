@@ -1,3 +1,5 @@
+import "../css/player-card.css";
+
 function PlayerCard({ player }) {
   if (!player) return null;
 

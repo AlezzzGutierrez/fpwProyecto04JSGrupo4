@@ -1,0 +1,91 @@
+/* Formulario de registro de jugador */
+.player-form {
+    background-color: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(28, 59, 34, 0.3);
+    border-radius: 16px;
+    padding: 25px;
+    box-sizing: border-box;
+    width: 100%;
+    color: #1c3b22;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del formulario */
+.player-form h2 {
+    font-family: 'Pacifico', cursive;
+    color: #1c3b22;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Grupo de etiqueta, input y error */
+.player-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+/* Etiquetas */
+.player-form label {
+    font-weight: 600;
+    color: #1c3b22;
+}
+
+/* Campos de entrada */
+.player-form input {
+    padding: 12px;
+    border: 1px solid rgba(28, 59, 34, 0.4);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #1c3b22;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Campo seleccionado */
+.player-form input:focus {
+    border-color: #1e4570;
+    box-shadow: 0 0 0 3px rgba(30, 69, 112, 0.15);
+}
+
+/* Texto de ejemplo */
+.player-form input::placeholder {
+    color: #788574;
+}
+
+/* Mensajes de error */
+.player-form .error-text {
+    color: #8b0000;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Botón para guardar */
+.player-form .btn-submit {
+    width: 100%;
+    background-color: #1e4570;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.player-form .btn-submit:hover {
+    background-color: #163455;
+    transform: translateY(-2px);
+}
+
+.player-form .btn-submit:active {
+    transform: translateY(0);
+}

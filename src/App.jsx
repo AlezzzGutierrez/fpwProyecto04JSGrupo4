@@ -3,6 +3,7 @@ import PlayerForm from "./components/PlayerForm.jsx";
 import PlayerCard from "./components/PlayerCard.jsx";
 import GameResults from "./components/GameResults.jsx";
 import "./css/style.css";
+import "./css/player-return.css";
 
 function App() {
   // 1. Estado para guardar los datos del jugador registrado
