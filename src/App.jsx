@@ -3,7 +3,6 @@ import PlayerForm from "./components/PlayerForm.jsx";
 import PlayerCard from "./components/PlayerCard.jsx";
 import GameResults from "./components/GameResults.jsx";
 import "./css/style.css";
-import "./css/player-return.css";
 
 function App() {
   // 1. Estado para guardar los datos del jugador registrado
@@ -17,7 +16,7 @@ function App() {
   const handleSavePlayer = (playerData) => {
     setPlayer(playerData);
   };
-
+  
   // Función para lanzar el dado (adaptada a tu estilo y guardando el historial)
   const lanzarDado = () => {
     const resultado = Math.floor(Math.random() * 6) + 1;
@@ -44,6 +43,25 @@ function App() {
     setRolls([]);
     setTotalScore(0);
   };
+ 
+  // Devuelve el mensaje según el último resultado del dado
+  function obtenerMensaje() {
+    if (rolls.length === 0) {
+      return "";
+    }
+
+    const dado = rolls[rolls.length - 1].result;
+
+    if (dado === 1) {
+      return "Mala suerte, sacaste 1";
+    } else if (dado === 6) {
+      return "¡FELICIDADES! ¡Sacaste el mayor!";
+    } else {
+      return "Buen tiro!";
+    }
+  }
+
+
 
   return (
     <div className="main-card">
@@ -78,8 +96,16 @@ function App() {
             </div>
           </div>
 
+          <p className={`banner-resultado ${
+             rolls.length > 0 && rolls[rolls.length - 1].result === 1
+            ? "mala-suerte"
+              : ""
+                }`}>
+              {obtenerMensaje()}
+            </p>
           {/* Historial de tiradas */}
-          <GameResults rolls={rolls} totalScore={totalScore} />
+             <GameResults rolls={rolls} totalScore={totalScore} />
+
 
           {/*Botón para salir del usuario registrado*/}
           <div className="button-player-return">
