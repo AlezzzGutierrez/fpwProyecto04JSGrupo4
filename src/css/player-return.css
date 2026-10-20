@@ -1,4 +1,5 @@
-/* Contenedor del botón para cambiar de jugador */
+
+/* Contenedor del botón */
 .button-player-return {
     display: flex;
     justify-content: center;
@@ -21,6 +22,12 @@
     transition: transform 0.2s, background-color 0.2s;
 }
 
+.button-player-return .btn-submit:hover {
+    background-color: #163455;
+    transform: translateY(-2px);
+}
+
+
 /* Efecto al pasar el cursor */
 .button-player-return .btn-submit:hover {
     background-color: #163455;
@@ -30,4 +37,7 @@
 /* Efecto al presionar */
 .button-player-return .btn-submit:active {
     transform: translateY(0);
+}
+body {
+    background-color: red !important;
 }
